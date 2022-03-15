@@ -1,0 +1,42 @@
+.landing-image img
+{
+    display: none;
+}
+.form-dection .container
+{
+    width: 330px;
+}
+.form-dection .container h1
+{
+    font-size: 20px;
+}
+#formZarf
+{
+    width: 350px;  
+}
+#formZarf::before
+{
+    width: 330px;
+    background-size: 100% 100%;
+}
+#formZarf::after
+{
+    content: "";
+    width: 330px;
+    background-size: 100% 100%;
+}
+
+form{
+    width: 300px;
+    margin: 0px auto;
+}
+#formZarf:hover form
+{
+    height:500px ;
+    transition: all 1s ease-in-out .3s;
+}
+
+.btnUp
+{
+    cursor: pointer;
+}

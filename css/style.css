@@ -1,0 +1,421 @@
+/* ---------------Startimports------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+@import url("animation.css");
+@import url("varible.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;1,400;1,700&display=swap');
+/* ---------------End imports------------------ */
+/* ---------------Start global------------------ */
+*{
+    margin: 0;
+    padding: 0;
+    outline: none ;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  html::-webkit-scrollbar {
+    width: 15px;
+    background-color: #eb9f9f;
+  }
+  html::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #bdc9df;
+  }
+  html::-webkit-scrollbar-thumb {
+    height: 100px;
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.86, #1c3a94), color-stop(0.44, #7a99d9), color-stop(0.72, #497dbd), color-stop(0.86, #1c3a94));
+  }
+  
+/* ---------------Ensglobal------------------ */
+/* ---------------Start nav------------------ */
+.navbar
+{
+    background-color: var(--dark-color);
+}
+.Cnavbar-brand
+{
+    width: 120px;
+    height: 50px;
+}
+.Cnavbar-brand img
+{
+    width: 100%;
+    height: 100%;
+}
+.navbar .navbar-nav  .nav-link
+{
+    color:#fff;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover
+{
+color: var(--green-color);
+}
+.navbar .search{
+    border-left: 1px solid var(--green-color);
+    position: relative; 
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    transition: 0.5s;
+    border-radius: 40px;
+    margin-right: 5px;
+    box-shadow: 0 0 0 5px var(--dark-color);
+    overflow: hidden;
+}
+#input-search
+{
+    position: relative;
+    margin-left: 25px;
+    margin-top: 5px;
+    border: none;
+    padding: 4px 5px;
+    outline: none;
+    caret-color: var(--yellow-color); 
+}
+#clear
+{
+    position: absolute;
+    right: 400px;
+    top: calc(50% - 8px);
+    transform: translateX(100px);
+    cursor: pointer;
+}
+.navbar .search.active
+{
+    width:260px;
+}
+.icon
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:1000;
+    cursor: pointer;
+    overflow: hidden;
+}
+.navbar .search .icon::before{
+
+    content: "";
+    position: absolute;
+    width:15px;
+    height: 15px;
+    border: 2px solid var(--yellow-color);
+    border-radius: 50%;
+    transform: translate(-4px ,-4px);
+}
+.navbar .search .icon::after{
+
+    content: "";
+    position: absolute;
+    width:3px;
+    height: 12px;
+    background-color:  var(--yellow-color);
+    border-radius: 50%;
+    transform: translate(5px ,6px) rotate(315deg);
+}
+.navbar .search svg{
+    
+    color: var(--green-color);
+    top:50%;
+    left:50%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    
+}
+.navbar .navbar-toggler{
+
+    color:#fff;
+    font-size: 25px;
+    border-color: white;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+    border-color: var(--green-color);
+}
+.main-btn
+{
+    background-color: var( --yellow-color);
+    color: var(--dark-color);
+}
+.landing-image
+{
+    width: 400px;
+    height: auto;
+}
+.landing-image img
+{
+    width: 100%;
+    background-blend-mode: darken;
+}
+/* ---------------Start Landing------------------ */
+.landing
+{
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 97px);
+    font-family: 'Amiri', serif;
+}
+.title
+{
+    width: fit-content;
+    font-size: 30px;
+    margin:30px  auto;
+    border-right:2px solid var(--color-title);
+    color: var(--color-title);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 190px;
+    animation: control-width 3s steps(15) 2s both , blink 0.5s infinite;
+}
+.overlay
+{
+    width: 100%;
+    height: 100;
+    background: url(../assets/images/stars.png);
+}
+/* ---------------End Landing------------------ */
+/* ---------------Start Features------------------ */
+/*  */
+.features .icon-holder {
+    height: 200px;
+  }
+  .features .icon-holder svg {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .features .icon-holder .number {
+      font-size: 12rem;
+      color: var(--section-color);
+  }
+  .features .icon-holder .icon {
+      color: var(--green-color);
+    }
+    .features .feat h4 {
+        color: var(--yellow-color); 
+    }
+    .main-title::after
+    {
+        content: "";
+        width: 120px;
+        height: 2px;
+        background-color: var(--green-color);
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform:translate(-50%) ;
+    }
+    .i-size
+    {
+        font-size: 30px;
+    }
+    /* ---------------End Features------------------ */
+    /* ---------------Start slider------------------ */
+    .slider
+    {
+        width: 100%;
+        background-color: var(--section-color);
+        overflow: hidden;
+    
+    }
+    .slider .container
+    {
+        position: relative;
+    }
+    .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 200px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    background-color: #000;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0006);
+    -moz-box-reflect: below 1px linear-gradient(transparent,transparent,#0006);
+    box-reflect: below 1px linear-gradient(transparent,transparent,#0006);
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+/* ---------------End slider------------------ */
+/* ---------------Start Form------------------ */
+.form-dection
+{
+    background-color: var(--dark-color);
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+}
+#formZarf h1
+{
+   position: relative;
+   z-index: 7;
+   top:370px;
+   padding: 0;
+   margin: 0;
+}
+.form-dection .container
+{
+    width: 930px;
+    margin: 20px auto 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-dection .container h1
+{
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    transition: all 1s ease-in-out .3s;
+}
+#formZarf
+{
+    overflow: hidden;
+    height: 447px;
+    width: 550px;
+    position: relative;
+    top: 0px;
+    transition: all 1s ease-in-out .3s;
+}
+#formZarf::before
+{
+    content:"";
+    position: absolute;
+    bottom: 128px;
+    left: 0px;
+    background: url('../assets/images/before.png');
+    width: 530px;
+    height: 317px;
+}
+#formZarf::after
+{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: url('../assets/images/after.png');
+    width: 530px;
+    height: 259px;
+}
+#formZarf.hide::before,
+#formZarf.hide::after
+{
+    display: none;
+}
+#formZarf:hover
+{
+    height:877px;
+    top: -50px;
+}
+form{
+    background-color:#fff;
+    position: relative;
+    top: 150px;
+    overflow: hidden;
+    left: -10px;
+    height: auto;
+    width: 400px;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid white;
+    border-right: 3px;
+    transition: all 1s ease-in-out .3s;
+    direction: rtl;
+}
+#formZarf:hover form
+{
+    height:800px ;
+    transition: all 1s ease-in-out .3s;
+}
+#formZarf label
+{
+    margin: 11px 20px 0 0;
+    font-size: 15px;
+    color: gray;
+    text-transform: uppercase;
+}
+#formZarf input:not(input[type=submit])
+{
+    font:14px normal uppercase ,arial,serif;
+    color:dimgray;
+    background-color: none;
+    width: 380px;
+    height: 37px;
+    padding: 0px 10px;
+    margin: 0 0 10px 0 ;
+    border: 1px solid #f8f5f1;
+    border-radius: 5px;
+}
+#formZarf input[type=submit]
+{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 0 .5 gray;
+    background:none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: opacity 0.7 ease-in-out 0s;
+}
+#formZarf:hover input[type=submit]
+{
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.5 ease-in-out 1.3s;
+    box-shadow: 0 0 0 .5 gray;
+}
+#formZarf:hover h1
+{
+    display: none;
+}
+/* ---------------End Form------------------ */
+.smallContainer
+{
+    max-width:1080px;
+    margin:auto;
+    padding-inline:25px;
+    text-align:center;
+}
+.col-5
+{
+    width: 160px;
+    cursor:pointer;
+    filter:grayscale(100%);
+    padding-inline:25px;
+margin: 0 20px;
+}
+.col-5:hover
+{
+    filter:grayscale(0);
+}

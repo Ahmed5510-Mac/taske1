@@ -1,0 +1,20 @@
+@import url("varible.css");
+/* --------------------------------- */
+@keyframes control-width {
+    from{
+        width: 0;
+    }
+    to{
+        width: 190px;
+    }
+}
+/* --------------- */
+@keyframes blink{
+    from{
+        border-right-color: var(--green-color);
+    }
+    to{
+        border-right-color: transparent
+
+    }
+}
